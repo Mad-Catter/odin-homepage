@@ -1,0 +1,127 @@
+:root {
+	--blue-color: hsl(199, 65%, 54%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+/* Header */
+header {
+}
+h1,
+h2,
+h6 {
+	font-family: 'Playfair Display', sans-serif;
+}
+
+.picture-background {
+	background: linear-gradient(135deg, var(--blue-color) 50%, hsl(0, 0%, 100%) 50%);
+}
+
+.picture-container {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.picture-container picture {
+	display: block;
+	min-width: 100%;
+	height: auto;
+}
+.picture-container picture img {
+	box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.589);
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.picture-container h1 {
+	color: white;
+	position: absolute;
+	bottom: 25px;
+	left: 35px;
+	font-size: clamp(4rem, 20vw, 10rem);
+	overflow-wrap: break-word;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.589);
+}
+.text-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+h2 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: normal;
+}
+.text-container p {
+	color: rgb(97, 97, 97);
+	padding: 10px;
+	font-size: 1.25rem;
+}
+.header-links {
+	display: flex;
+	justify-content: center;
+}
+.header-links a {
+	margin: 0 10px;
+}
+.header-links img {
+	width: 30px;
+}
+
+/* My works */
+
+/* I am using media quieries to change the repeat count.  I want 1 column on mobile, 2 on tablets, and 3 on PCs.  I do believe there is a better way to do this
+So I might return to this later. */
+.projects-wrapper {
+	--repeat-count: 1;
+	display: grid;
+	grid-template-columns: repeat(var(--repeat-count), 1fr);
+	padding: 5%;
+	gap: 5%;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.project {
+	box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.26);
+}
+.project > img {
+	width: 100%;
+	height: auto;
+}
+.links-name-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.title-links img {
+	width: 25px;
+	height: auto;
+	padding: 0 5px;
+}
+
+.desc {
+	min-height: 100%;
+}
+
+@media (min-width: 500px) {
+	.projects-wrapper {
+		--repeat-count: 2;
+	}
+}
+
+@media (min-width: 800px) {
+	.projects-wrapper {
+		--repeat-count: 3;
+	}
+}
