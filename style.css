@@ -259,6 +259,7 @@ footer picture img {
 	main h2 {
 		text-align: left;
 		padding-top: 5%;
+		/* padding-left: clamp(0%, 8vw, 8%); */
 	}
 	.projects-wrapper {
 		--repeat-count: 2;
@@ -272,7 +273,6 @@ footer picture img {
 	}
 
 	/* Footer */
-	/* The distance between the img and the text grows too large as the screen grows.  May also need to cap font size */
 	address span {
 		display: inline-flex;
 		align-items: center;
@@ -300,7 +300,7 @@ footer picture img {
 	}
 	footer picture {
 		height: initial;
-		max-width: 350px;
+		max-width: clamp(350px, 33vw, 400px);
 	}
 	footer picture img {
 		width: 250px;
