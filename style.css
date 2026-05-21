@@ -9,7 +9,12 @@
 	font-family: 'Roboto', sans-serif;
 }
 /* Header */
-
+.tablet.tablet {
+	display: none;
+}
+.tablet-header {
+	display: contents;
+}
 h1,
 h2,
 h6 {
@@ -113,7 +118,7 @@ So I might return to this later. */
 .links-name-wrapper h3 {
 	width: 70%;
 	text-align: center;
-	font-size: clamp(1.5rem, 6vw, 1.9rem);
+	font-size: clamp(1.5rem, 6vw, 1.75rem);
 
 	font-weight: normal;
 	padding: 2.5% 0;
@@ -192,15 +197,114 @@ footer picture img {
 	display: block;
 	min-width: 100%;
 	height: auto;
-
-	/* GET RID OF THIS LATER */
-	max-width: 700px;
 }
 
 @media (min-width: 769px) {
+	/* header section */
+	.tablet-header {
+		display: block;
+		width: 700px;
+		height: auto;
+		background-color: white;
+		box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.26);
+		margin-top: 100px;
+		position: relative;
+	}
+	.empty-space {
+		width: 350px;
+		height: 350px;
+		float: left;
+	}
+	.tablet-header .picture-container {
+		position: absolute;
+		width: 350px;
+		float: left;
+		padding: 0;
+		left: -4%;
+		top: -16%;
+	}
+	.picture-container h1 {
+		top: 0;
+		left: 85%;
+		white-space: nowrap;
+		font-size: 3.5rem;
+	}
+	.text-container.tablet {
+		display: block;
+		position: relative;
+		padding-bottom: 60px;
+		margin-top: 40px;
+	}
+
+	.text-container.tablet p {
+		padding-right: 15px;
+	}
+	.text-container.tablet .header-links {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.text-container.tablet .header-links img {
+		width: 35px;
+	}
+	.mobile {
+		display: none;
+	}
+
+	/* Projects section */
+	/* The gap in the grid grows too large in the end.  The My Work h2 gets pushed too far is the column gap gets changed*/
+	main {
+		padding: 0 5%;
+	}
+	main h2 {
+		text-align: left;
+		padding-top: 5%;
+	}
 	.projects-wrapper {
 		--repeat-count: 2;
-		margin: 10% 0;
+		margin: 2.5% 0 10% 0;
+		padding: 5% 0;
+		column-gap: 5%;
+	}
+	.project {
+		max-width: 350px;
+		max-height: 460px;
+	}
+
+	/* Footer */
+	/* The distance between the img and the text grows too large as the screen grows.  May also need to cap font size */
+	address span {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	address img {
+		display: inline-block;
+		width: 25px;
+	}
+	footer {
+		display: flex;
+		padding: 2.5%;
+	}
+	.footer-text {
+		max-width: 50%;
+	}
+	footer address {
+		font-size: clamp(1.1rem, 2.4vw, 1.8rem);
+	}
+	.footer-picture-container {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	footer picture {
+		height: initial;
+		max-width: 350px;
+	}
+	footer picture img {
+		width: 250px;
+		height: auto;
 	}
 }
 

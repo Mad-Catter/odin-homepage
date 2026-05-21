@@ -16,20 +16,41 @@
 	<body>
 		<header>
 			<div class="picture-background">
-				<div class="picture-container">
-					<h1>John Johnson</h1>
-					<picture>
-						<source media="(min-width: 769px)" srcset="./assets/single-og.jpg" />
-						<source media="(min-width: 500px)" srcset="./assets/single-500.png" />
-						<img src="./assets/single-small.png" alt="A man working on a laptop" />
-					</picture>
+				<div class="tablet-header">
+					<div class="empty-space"></div>
+					<div class="picture-container">
+						<h1>John Johnson</h1>
+						<picture>
+							<source media="(min-width: 769px)" srcset="./assets/single-500-vert.png" />
+							<source media="(min-width: 500px)" srcset="./assets/single-500.png" />
+							<img src="./assets/single-small.png" alt="A man working on a laptop" />
+						</picture>
+					</div>
+					<div class="text-container tablet">
+						<h2>About Me</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque perspiciatis minus tenetur magnam totam
+							sed! Asperiores, illum! Illum earum quia accusantium eius asperiores, dolor magni impedit iusto at, sint
+							veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident omnis praesentium
+							natus similique numquam nesciunt, quae necessitatibus non, qui molestias distinctio in ab voluptatum
+							voluptatem, soluta repellat perferendis! Quidem!
+						</p>
+						<div class="header-links">
+							<a href=""><img src="./assets/github.svg" alt="Github" /></a>
+							<a href=""><img src="./assets/linkedin.svg" alt="LinkedIn" /></a>
+							<a href=""><img src="./assets/x.svg" alt="X.com" /></a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="text-container">
+			<div class="text-container mobile">
 				<h2>About Me</h2>
 				<p>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque perspiciatis minus tenetur magnam totam sed!
 					Asperiores, illum! Illum earum quia accusantium eius asperiores, dolor magni impedit iusto at, sint veritatis.
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident omnis praesentium natus similique
+					numquam nesciunt, quae necessitatibus non, qui molestias distinctio in ab voluptatum voluptatem, soluta
+					repellat perferendis! Quidem!
 				</p>
 				<div class="header-links">
 					<a href=""><img src="./assets/github.svg" alt="Github" /></a>
@@ -117,14 +138,14 @@
 					1234 Random Road<br />
 					Random Town, California 12345<br />
 					<br />
-					<span><img src="./assets/phone-outline.svg" alt="" class="unrequired" aria-hidden="true" />555-555-5555</span>
 					<span
-						><img
-							src="./assets/email-outline.svg"
-							alt=""
-							class="unrequired"
-							aria-hidden="true"
-						/>johnjohnson.is.real.2me@gmail.com</span
+						><img src="./assets/phone-outline.svg" alt="" class="unrequired" aria-hidden="true" /> 555-555-5555</span
+					>
+					<br />
+
+					<span
+						><img src="./assets/email-outline.svg" alt="" class="unrequired" aria-hidden="true" />
+						johnjohnson.is.real.2me@gmail.com</span
 					>
 				</address>
 				<div class="footer-links">
@@ -133,12 +154,14 @@
 					<a href=""><img src="./assets/x.svg" alt="X.com" /></a>
 				</div>
 			</div>
-			<picture>
-				<!-- Could maybe use a image that is taller rather than wider here. -->
-				<source media="(min-width: 769px)" srcset="./assets/group-og.jpg" />
-				<source media="(min-width: 500px)" srcset="./assets/group-500.png" />
-				<img src="./assets/group-small.png" alt="A group of employees" />
-			</picture>
+			<div class="footer-picture-container">
+				<picture>
+					<!-- Could maybe use a image that is taller rather than wider here. -->
+					<source media="(min-width: 769px)" srcset="./assets/group-500-vert.png" />
+					<source media="(min-width: 500px)" srcset="./assets/group-500.png" />
+					<img src="./assets/group-small.png" alt="A group of employees" />
+				</picture>
+			</div>
 		</footer>
 	</body>
 </html>
