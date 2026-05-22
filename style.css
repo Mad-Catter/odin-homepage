@@ -94,16 +94,14 @@ So I might return to this later. */
 	gap: 10%;
 	padding: 5%;
 	align-items: center;
-	justify-items: center;
-	justify-content: center;
-	width: 100%;
+	justify-items: stretch;
 	/* This margin is a bandaid fix for overflow issues.  Once again maybe return to this later */
-	margin: clamp(0px, 35%, 200px) 0%;
+	margin: clamp(0px, 35%, 200px) auto;
+	max-width: 500px;
 }
 .project {
 	box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.26);
 	min-height: 0;
-	max-height: 600px;
 	max-width: 500px;
 }
 .project > img {
@@ -254,7 +252,7 @@ footer picture img {
 	/* Projects section */
 	/* The gap in the grid grows too large in the end.  The My Work h2 gets pushed too far is the column gap gets changed*/
 	main {
-		padding: 0 5%;
+		padding: 0 clamp(5%, 9vw, 9%);
 	}
 	main h2 {
 		text-align: left;
@@ -263,13 +261,13 @@ footer picture img {
 	}
 	.projects-wrapper {
 		--repeat-count: 2;
-		margin: 2.5% 0 10% 0;
+		margin: 2.5% auto 10%;
 		padding: 5% 0;
-		column-gap: 5%;
+		/* column-gap: 5%; */
+		max-width: none;
 	}
 	.project {
-		max-width: 350px;
-		max-height: 460px;
+		max-width: 450px;
 	}
 
 	/* Footer */
