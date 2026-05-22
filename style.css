@@ -9,10 +9,10 @@
 	font-family: 'Roboto', sans-serif;
 }
 /* Header */
-.tablet.tablet {
+.tablet {
 	display: none;
 }
-.tablet-header {
+.picture-text-wrapper {
 	display: contents;
 }
 h1,
@@ -21,7 +21,7 @@ h6 {
 	font-family: 'Playfair Display', sans-serif;
 }
 
-.picture-background {
+.gradient-background {
 	background: linear-gradient(170deg, var(--blue-color) 75%, hsl(0, 0%, 100%) 25%);
 	display: flex;
 	justify-content: center;
@@ -36,14 +36,11 @@ h6 {
 .picture-container picture {
 	display: block;
 	width: 100%;
-	height: auto;
 }
 .picture-container picture img {
 	box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.589);
 	display: block;
 	width: 100%;
-	height: auto;
-	object-fit: cover;
 }
 .picture-container h1 {
 	color: white;
@@ -51,13 +48,7 @@ h6 {
 	bottom: 25px;
 	left: 35px;
 	font-size: clamp(4rem, 18vw, 5.5rem);
-	overflow-wrap: break-word;
 	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.589);
-}
-.text-container {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
 }
 h2 {
 	text-align: center;
@@ -65,10 +56,8 @@ h2 {
 	font-weight: normal;
 }
 .text-container p {
-	color: rgb(97, 97, 97);
+	color: hsl(0, 0%, 38%);
 	padding: clamp(10px, 5vw, 50px);
-	overflow-wrap: break-word;
-	max-width: 100%;
 	font-size: 1.25rem;
 }
 .header-links {
@@ -94,7 +83,6 @@ So I might return to this later. */
 	gap: 10%;
 	padding: 5%;
 	align-items: center;
-	justify-items: stretch;
 	/* This margin is a bandaid fix for overflow issues.  Once again maybe return to this later */
 	margin: clamp(0px, 35%, 200px) auto;
 	max-width: 500px;
@@ -102,7 +90,6 @@ So I might return to this later. */
 .project {
 	box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.26);
 	min-height: 0;
-	max-width: 500px;
 }
 .project > img {
 	width: 100%;
@@ -111,7 +98,6 @@ So I might return to this later. */
 .links-name-wrapper {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 .links-name-wrapper h3 {
 	width: 70%;
@@ -140,7 +126,7 @@ So I might return to this later. */
 .desc {
 	font-size: 1rem;
 	font-size: clamp(1rem, 3vw, 1.3rem);
-	color: rgb(97, 97, 97);
+	color: hsl(0, 0%, 38%);
 	padding: 5%;
 	padding-bottom: 15%;
 }
@@ -164,7 +150,6 @@ footer p {
 	padding: min(80px, 7%) 0%;
 }
 footer address {
-	font-size: 1.1rem;
 	font-size: clamp(1.1rem, 3.2vw, 1.5rem);
 	font-style: normal;
 }
@@ -174,7 +159,6 @@ address img {
 
 .footer-links {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	padding: min(30px, 10%);
 }
@@ -188,7 +172,6 @@ address img {
 
 footer picture {
 	width: 100%;
-	height: 100%;
 	display: block;
 }
 footer picture img {
@@ -199,7 +182,7 @@ footer picture img {
 
 @media (min-width: 769px) {
 	/* header section */
-	.tablet-header {
+	.picture-text-wrapper {
 		display: block;
 		width: 700px;
 		height: auto;
@@ -213,7 +196,7 @@ footer picture img {
 		height: 350px;
 		float: left;
 	}
-	.tablet-header .picture-container {
+	.picture-text-wrapper .picture-container {
 		position: absolute;
 		width: 350px;
 		float: left;
@@ -227,22 +210,22 @@ footer picture img {
 		white-space: nowrap;
 		font-size: 3.5rem;
 	}
-	.text-container.tablet {
+	.text-container {
 		display: block;
 		position: relative;
 		padding-bottom: 60px;
 		margin-top: 40px;
 	}
 
-	.text-container.tablet p {
+	.text-container p {
 		padding-right: 15px;
 	}
-	.text-container.tablet .header-links {
+	.text-container .header-links {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 	}
-	.text-container.tablet .header-links img {
+	.text-container .header-links img {
 		width: 35px;
 	}
 	.mobile {
@@ -250,20 +233,17 @@ footer picture img {
 	}
 
 	/* Projects section */
-	/* The gap in the grid grows too large in the end.  The My Work h2 gets pushed too far is the column gap gets changed*/
 	main {
 		padding: 0 clamp(5%, 9vw, 9%);
 	}
 	main h2 {
 		text-align: left;
 		padding-top: 5%;
-		/* padding-left: clamp(0%, 8vw, 8%); */
 	}
 	.projects-wrapper {
 		--repeat-count: 2;
 		margin: 2.5% auto 10%;
 		padding: 5% 0;
-		/* column-gap: 5%; */
 		max-width: none;
 	}
 	.project {
